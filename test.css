@@ -1,0 +1,404 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.checkbox,
+.lines {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    opacity: 0.85;
+    z-index: 999;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuitems {
+    display: flex;
+    margin-top: 20px;
+}
+
+.item {
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(24, 23, 23);
+    transition: color 0.4s ease-in-out;
+}
+
+.item:hover {
+    color: seagreen;
+}
+
+.heading {
+    margin-top: 0px;
+}
+
+.section {
+    height: 60vh;
+    background: url("./header-image2.jpg");
+}
+
+.title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: seagreen;
+    border-radius: 40px;
+    color: #ffff;
+}
+
+.header-btn:hover {
+    border: 2px solid red;
+}
+
+.about {
+    margin-top: 2em;
+    box-shadow: 0px 5px 10px 0px #aaa;
+}
+
+.heading1 {
+    margin-bottom: 0;
+}
+
+.para {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.about-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textbox-about {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-115%);
+    animation: about-textbox 1s ease-in-out forwards;
+}
+
+@keyframes about-textbox {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.imagebox-about {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(115%);
+    animation: about-imagebox 1s ease-in-out forwards;
+}
+
+@keyframes about-imagebox {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.image {
+    display: block;
+    height: 350px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.para-about {
+    font-weight: 600;
+    color: rgb(56, 57, 58);
+}
+
+
+/* ****************************types of foods************************* */
+
+.types-of-foods {
+    margin-top: 7em;
+}
+
+.heading-type {
+    text-align: center;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    font-size: 1.3rem;
+}
+
+.images-food-type {
+    display: flex;
+    flex-direction: row;
+    height: 240px;
+    max-width: 100%;
+    justify-content: space-around;
+}
+
+.fimg {
+    display: block;
+    height: 240px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgfood {
+    position: relative;
+    color: #fff;
+}
+
+.imgfood .anm {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
+
+.imgfood:hover .anm {
+    opacity: 1;
+    left: 50%;
+}
+
+.imgfood:hover::after {
+    opacity: 1;
+}
+
+.imgfood::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* *******************.food-container************************ */
+
+.food-menu {
+    box-shadow: 0px 5px 10px 0px #aaa;
+}
+
+.food-title {
+    text-align: center;
+    margin-top: 4em;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+
+.food-image {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.food-item {
+    display: flex;
+    flex: 1 1 600px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.food-desc-box {
+    margin: auto 1.5rem;
+}
+
+.cont {
+    display: flex;
+}
+
+.food-price {
+    color: rgb(5, 71, 71);
+    font-weight: bold;
+}
+
+.food-price span {
+    color: red;
+}
+
+
+/***************** rating page*********************** */
+
+#rating {
+    background-color: rgb(245, 245, 245);
+}
+
+.rating-column {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.customer-img {
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rate-heading {
+    text-align: center;
+    padding: 2em;
+}
+
+.customer-sen {
+    text-align: center;
+}
+
+.customer-name {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cust-sen {
+    color: rgb(56, 57, 58);
+    font-weight: bold;
+    padding: 2em;
+}
+
+.checked {
+    color: orange;
+}
+
+.rating-col1 {
+    text-align: center;
+}
+
+
+/****************contact********************/
+
+.contact-us {
+    display: flex;
+    height: 360px;
+    margin: 3rem;
+    box-shadow: 0px 5px 10px 0px rgb(90, 89, 89);
+}
+
+.contact-imagebox {
+    width: 50%;
+}
+
+.contact-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-form-box {
+    padding: 5px 20px;
+    width: 50%;
+}
+
+.inf input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.534);
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.inf textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.534);
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.footer {
+    height: 3.6rem;
+    max-width: 100%;
+    background-color: rgb(28, 73, 75);
+}
+
+.footer-line {
+    text-align: center;
+    padding: 1.3rem;
+    color: rgba(255, 255, 255, 0.815);
+}
+
+
+/* @media screen and (max-width: 800px) {
+    .cont {
+        flex-direction: column;
+        width: 100%;
+    }
+    .food-menu {
+        width: 800px;
+    }
+    .food-container {
+        width: 100%;
+    }
+    .food-item {
+        flex-direction: column;
+        margin: 15px;
+        text-align: center;
+    }
+    .food-imagebox {
+        padding-left: 250px;
+    }
+    .images-food-type {
+        flex-direction: column;
+        width: 100%;
+    }
+} */

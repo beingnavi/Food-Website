@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+.menu {
+    position: relative;
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.list {
+    display: none;
+    padding: 60px;
+    border: 2px solid red;
+}
+
+.input[type="checkbox"]:checked~.list {
+    display: block;
+}
+
+.lines {
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet;
+    position: absolute;
+    margin-right: 20px;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+}
